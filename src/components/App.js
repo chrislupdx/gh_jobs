@@ -1,7 +1,8 @@
 import React from 'react';
+import GeneralJobList from '../containers/jobs/GeneralJobList';
 
 export default function App() {
   return (
-    <h1>hey</h1>
+    <GeneralJobList />  
   );
 }
