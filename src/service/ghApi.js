@@ -7,6 +7,6 @@ const get = url => {
     });
 };
 
-export const pdxGenSearch = () => {
+export const getPdxGenJobs = () => {
   return get('https://jobs.github.com/positions.json?location=Portland+OR');
 };
