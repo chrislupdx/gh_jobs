@@ -1,9 +1,9 @@
 import React, { PureComponent } from 'react';
 
-class GeneralJobList extends PureComponent {
+class PdxGenJobList extends PureComponent {
   render() {
     return <p>Ugh</p>;
   }
 }
 
-export default GeneralJobList;
+export default PdxGenJobList;
