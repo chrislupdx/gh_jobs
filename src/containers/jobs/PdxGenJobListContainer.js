@@ -32,7 +32,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   fetch() {
-    dispatch(fetchPdxJobs);
+    dispatch(fetchPdxJobs());
   }
 });
 

@@ -3,5 +3,4 @@ import pdxjobs from './pdxJobsReducer';
 
 export default combineReducers({
   pdxjobs
-})
-;
+});
