@@ -1,4 +1,4 @@
-import getGenPdxJobs from '../service/ghApi';
+import { getGenPdxJobs } from '../service/ghApi';
 import { createAction } from 'promise-middleware-redux';
 
 

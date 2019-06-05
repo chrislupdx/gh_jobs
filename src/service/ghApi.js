@@ -7,6 +7,10 @@ const get = url => {
     });
 };
 
-export const getPdxGenJobs = () => {
-  return get('https://jobs.github.com/positions.json?location=Portland+OR');
+export const getGenPdxJobs = () => {
+  return get('https://jobs.github.com/positions.json?location=Portland+OR&page=1')
+    .then(json => json.map(app => ({
+      id: app.id,
+      type: app.type
+    })));
 };
