@@ -1,4 +1,4 @@
-import getPdxGenJobs from '../service/ghApi';
+import getGenPdxJobs from '../service/ghApi';
 import { createAction } from 'promise-middleware-redux';
 
 
@@ -8,4 +8,4 @@ export const [
   FETCH_PDXJOBS_LOADING,
   _,
   FETCH_PDXJOBS_ERROR
-] = createAction('FETCH_PDXJOBS', getPdxGenJobs);
+] = createAction('FETCH_PDXJOBS', getGenPdxJobs);

@@ -1,8 +1,8 @@
 import React from 'react';
-import PdxGenJobList from '../containers/jobs/PdxGenJobList';
+import PdxGenJobListContainer from '../containers/jobs/PdxGenJobListContainer';
 
 export default function App() {
   return (
-    <PdxGenJobList />  
+    <PdxGenJobListContainer />  
   );
 }
