@@ -15,7 +15,7 @@ export default function reducer(state = initialState, action) {
     case FETCH_PDXJOBS_LOADING:
       return { ...state, loading: true };
     case FETCH_PDXJOBS:
-      return { ...state, error: null, loading: false };
+      return { ...state, error: null, loading: false, genpdxjobList: action.payload };
     case FETCH_PDXJOBS_ERROR:
       return { ...state, loading: false, error: action.payload };
     default:
