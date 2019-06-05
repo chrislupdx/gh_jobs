@@ -5,6 +5,7 @@ export default function Jobapp({ jobapp }) {
   return (
     <section>
       <p>{jobapp.type}</p>
+
     </section>
   );
 }

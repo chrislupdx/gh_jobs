@@ -19,7 +19,7 @@ function List({ jobapps }) {
 List.propTypes = {
   jobapps: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired
+    type: PropTypes.string.isRequired
   })).isRequired
 };
 

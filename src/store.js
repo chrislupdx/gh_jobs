@@ -3,7 +3,7 @@ import {
   applyMiddleware,
   compose
 } from 'redux';
-import reducer from './reducers/index';
+import reducer from './reducers';
 import { promiseMiddleware } from 'promise-middleware-redux';
 
 export default createStore(
