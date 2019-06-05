@@ -21,7 +21,6 @@ class PdxGenJobList extends PureComponent {
   render() {
     const { genPdxJobList, loading } = this.props;
     if(loading) return <h1>loading</h1>;
-    <p>poops</p>;
     return <List jobapps ={genPdxJobList} />;
   }
 }
