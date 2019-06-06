@@ -14,7 +14,7 @@ class PdxGenJobList extends PureComponent {
   }
 
   componentDidMount() {
-    console.log(this.props.fetch);
+    console.log('fetch', this.props.fetch);
     this.props.fetch();
   }
 

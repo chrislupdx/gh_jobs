@@ -7,18 +7,20 @@ import {
   getJobsByIdLoading,
   getJobsByIdError
 } from '../../selectors/jobsByIdSelector';
+import AppDetailView from '../../components/detailapp/appDetail';
 
 class JobsByIdContainer extends PureComponent {
     static propTypes = {
       fetch: PropTypes.func.isRequired,
       jobapp: PropTypes.array.isRequired,
       loading: PropTypes.bool.isRequired,
+      id: PropTypes.string.isRequired,
       error: PropTypes.object
     }
 
     componentDidMount() {
-      console.log(this.props.fetch);
-      this.props.fetch();
+      this.props.fetch(this.props.id);
+      console.log('didmount', this.props.id);
     }
 
     render() {
@@ -34,9 +36,9 @@ const mapStateToProps = state => ({
   error: getJobsByIdError(state)
 });
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch, props) => ({
   fetch() {
-    dispatch(fetchJobById());
+    dispatch(fetchJobById(props.match.params.id));
   }
 });
 

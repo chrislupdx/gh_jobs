@@ -7,4 +7,4 @@ export const [
   FETCH_JOBBYID_LOADING,
   _,
   FETCH_JOBBYID_ERROR,
-] = createAction('FETCH_JOBBYID', getJobById);
+] = createAction('FETCH_JOBBYID', (getJobById));

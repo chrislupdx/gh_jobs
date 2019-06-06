@@ -7,11 +7,12 @@ const get = url => {
     });
 };
 
+
 export const getGenPdxJobs = () => {
   return get('https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?location=Portland+OR');
    
 };
 
 export const getJobById = id => {
-  return get(`https://jobs.github.com/positions/${id}.json`);
+  return get(`https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions/${id}.json`);
 };
