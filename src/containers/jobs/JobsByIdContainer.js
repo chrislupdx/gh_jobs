@@ -8,6 +8,7 @@ import {
   getJobsByIdError
 } from '../../selectors/jobsByIdSelector';
 import AppDetailView from '../../components/detailapp/appDetail';
+import CreateComment from '../comments/CreateComment';
 
 class JobsByIdContainer extends PureComponent {
     static propTypes = {
@@ -26,7 +27,13 @@ class JobsByIdContainer extends PureComponent {
     render() {
       const { jobapp, loading } = this.props;
       if(loading) return <h1>loading</h1>;
-      return <AppDetailView jobapp={jobapp} />;
+
+      return (
+        <section>
+          <AppDetailView jobapp={jobapp} />
+          <CreateComment id={this.props.id} />
+        </section>
+      );
     }
 }
 

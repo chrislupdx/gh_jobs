@@ -15,12 +15,12 @@ function AppDetailView({ jobapp }) {
   return (
     <section>
       <p>{title}</p>
+      <p>{company}</p>
       <p>{created_at}</p>
       <p>{how_to_apply}</p>
       <p>{location}</p>
       <p>{type}</p>
       <p>{description}</p>
-      <p>{company}</p>
     </section>
   );
 }
