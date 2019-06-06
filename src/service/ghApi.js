@@ -16,3 +16,7 @@ export const getGenPdxJobs = () => {
 export const getJobById = id => {
   return get(`https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions/${id}.json`);
 };
+
+export const getJobByKW = kw => {
+  return get(`https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions/${kw}.json`);
+};
