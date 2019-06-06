@@ -12,15 +12,16 @@ function AppDetailView({ jobapp }) {
     how_to_apply
   } = jobapp;
 
+  console.log(jobapp.description);
   return (
     <section>
       <p>{title}</p>
       <p>{company}</p>
+      <p dangerouslySetInnerHTML={ { __html: how_to_apply }}></p>
       <p>{created_at}</p>
-      <p>{how_to_apply}</p>
       <p>{location}</p>
       <p>{type}</p>
-      <p>{description}</p>
+      <p dangerouslySetInnerHTML={ { __html: description }}></p>
     </section>
   );
 }
