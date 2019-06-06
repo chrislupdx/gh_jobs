@@ -4,6 +4,7 @@ import CommentForm from './CommentForm';
 
 const mapDispatchToProps = (dispatch) => ({
   onSubmit(id, comment) {
+    console.log(dispatch);
     dispatch(createComment(id, comment));
   }
 })

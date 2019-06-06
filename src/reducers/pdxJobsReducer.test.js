@@ -1,12 +1,14 @@
 import reducer from './pdxJobsReducer';
-import { FETCH_PDXJOBS, FETCH_PDXJOBS_LOADING, FETCH_PDXJOBS_ERROR } from '../actions/genSearchActions';
+import { FETCH_PDXJOBS, 
+  FETCH_PDXJOBS_LOADING, 
+  FETCH_PDXJOBS_ERROR } from '../actions/genSearchActions';
 
 describe('pdxJobsReducer', () => {
     
   it('handles the fetch jobs reducer ', () => {
     const initialState = {
-      loading: false,
-      genpdxjobList: [],
+      loading: true,
+      genPdxJobList: [],
       error: null
     };
 
@@ -17,12 +19,12 @@ describe('pdxJobsReducer', () => {
 
     expect(newState).toEqual({
       loading: false,
-      genpdxjobList: ['one', 'two'],
+      genPdxJobList: ['one', 'two'],
       error: null
     });
   });
 
-  it('handles the fetch pokemons loading action', () => {
+  it('handles the fetch jobs loading action', () => {
     const initialState = {
       loading: false,
       genpdxjobList: [],
@@ -40,7 +42,7 @@ describe('pdxJobsReducer', () => {
     });
   });
 
-  it('handles the fetch pokemons error actoin', () => {
+  it('handles the fetch jobs error actoin', () => {
     const initialState = {
       loading: true,
       genpdxjobList: [],
