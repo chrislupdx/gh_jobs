@@ -13,15 +13,15 @@ import CreateComment from '../comments/CreateComment';
 class JobsByIdContainer extends PureComponent {
     static propTypes = {
       fetch: PropTypes.func.isRequired,
-      jobapp: PropTypes.array.isRequired,
+      jobapp: PropTypes.object.isRequired,
       loading: PropTypes.bool.isRequired,
-      id: PropTypes.string.isRequired,
+      // id: PropTypes.string.isRequired,
+      match: PropTypes.object.isRequired,
       error: PropTypes.object
     }
 
     componentDidMount() {
-      this.props.fetch(this.props.id);
-      console.log('didmount', this.props.id);
+      this.props.fetch();
     }
 
     render() {
@@ -31,7 +31,7 @@ class JobsByIdContainer extends PureComponent {
       return (
         <section>
           <AppDetailView jobapp={jobapp} />
-          <CreateComment id={this.props.id} />
+          <CreateComment id={this.props.match.params.id} />
         </section>
       );
     }

@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
+//can commentForm signal state change to the mapdispatch in createcomment
 export default class CommentForm extends PureComponent {
     static propTypes = {
       onSubmit: PropTypes.func.isRequired,
@@ -11,12 +12,14 @@ export default class CommentForm extends PureComponent {
       comment: ''
     }
 
-    handlSubmit = event => {
+    handleSubmit = event => {
       event.preventDefault();
 
       const { comment } = this.state;
       const { id, onSubmit } = this.props;
       onSubmit(id, comment);
+      //looks like ln22 clears comment, check its conditional
+      console.log(id, comment, 'idcomment');
       this.setState({ comment: '' });
     }
 
@@ -27,7 +30,7 @@ export default class CommentForm extends PureComponent {
     render() {
       const { comment } = this.state;
       return (
-        <form onSubmit={this.handlSubmit}>
+        <form onSubmit={this.handleSubmit}>
           <textarea value={comment} onChange= {this.updateComment}></textarea>
           <button>Submit</button>
         </form>
