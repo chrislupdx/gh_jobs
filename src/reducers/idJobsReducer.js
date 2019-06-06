@@ -10,6 +10,7 @@ const initialState = {
 };
 
 export default function reducer(state = initialState, action) {
+  // console.log(action.payload, 'idjobs');
   switch(action.type) {
     case FETCH_JOBBYID:
       return { ...initialState, jobapp: action.payload, loading: false };
