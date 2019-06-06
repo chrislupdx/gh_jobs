@@ -1,10 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 export default function Jobapp({ jobapp }) {
   return (
     <section>
-      <p>{jobapp.title}</p>
+      <Link to={`/${jobapp.id}`}> 
+        <p>{jobapp.title}</p>
+      </Link>
       <p>{jobapp.created_at}</p>
       <p>{jobapp.company}</p>
       <p>{jobapp.company_url}</p>
