@@ -1,7 +1,6 @@
 import { CREATECOMMENT } from '../actions/commentActions';
 
 export default function reducer(state = {}, action) {
-  console.log(action.payload, 'commentreducer');
   switch(action.type) {
     case CREATECOMMENT:
       return {

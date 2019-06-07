@@ -13,13 +13,11 @@ export default class CommentForm extends PureComponent {
 
     handleSubmit = event => {
       event.preventDefault();
-      console.log(this.props, 'inhandlesub');
 
       const { comment } = this.state;
       const { id, onSubmit } = this.props;
       onSubmit(id, comment);
       //looks like ln22 clears comment, check its conditional
-      console.log(this.state, 'handlesubmit');
       this.setState({ comment: '' });
     }
 

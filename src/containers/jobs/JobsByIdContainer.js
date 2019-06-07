@@ -9,6 +9,7 @@ import {
 } from '../../selectors/jobsByIdSelector';
 import AppDetailView from '../../components/detailapp/appDetail';
 import CreateComment from '../comments/CreateComment';
+import CommentListContainer from '../../containers/comments/CommentListContainer';
 
 class JobsByIdContainer extends PureComponent {
     static propTypes = {
@@ -17,7 +18,7 @@ class JobsByIdContainer extends PureComponent {
       loading: PropTypes.bool.isRequired,
       // id: PropTypes.string.isRequired,
       match: PropTypes.object.isRequired,
-      error: PropTypes.object
+      error: PropTypes.object.isRequired,
     }
 
     componentDidMount() {
@@ -27,11 +28,11 @@ class JobsByIdContainer extends PureComponent {
     render() {
       const { jobapp, loading } = this.props;
       if(loading) return <h1>loading</h1>;
-      // console.log('bycontainer', this.props.match.params.id);
       return (
         <section>
           <AppDetailView jobapp={jobapp} />
           <CreateComment id={this.props.match.params.id} />
+          <CommentListContainer id={this.props.match.params.id} />
         </section>
       );
     }
@@ -40,7 +41,7 @@ class JobsByIdContainer extends PureComponent {
 const mapStateToProps = state => ({
   jobapp: getJobsByIdDetail(state),
   loading: getJobsByIdLoading(state),
-  error: getJobsByIdError(state)
+  error: getJobsByIdError(state),
 });
 
 const mapDispatchToProps = (dispatch, props) => ({

@@ -12,7 +12,6 @@ function AppDetailView({ jobapp }) {
     how_to_apply
   } = jobapp;
 
-  console.log(jobapp.description);
   return (
     <section>
       <p>{title}</p>
