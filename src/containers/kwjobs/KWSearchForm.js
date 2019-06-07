@@ -19,7 +19,6 @@ export default class KWSearchForm extends PureComponent {
 
       const { query } = this.state;
       const { onSubmit } = this.props;
-      console.log(query, 'qunery');
       onSubmit(query);
       this.setState({ query: '' });
     }

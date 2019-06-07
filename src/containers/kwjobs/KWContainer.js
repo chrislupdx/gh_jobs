@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchJobByKW } from '../../actions/kwSearchActions';
 import KWSearchContainer from '../kwjobs/KWSearchContainer';
+import KwList from '../../components/kwjobs/kwList';
+import { getKWJobsList, getKWJobsLoading, getKWJobsError } from '../../selectors/kwSelector';
 
 class KWContainer extends PureComponent {
   //rn just props for upload
@@ -10,7 +12,8 @@ class KWContainer extends PureComponent {
     fetch: PropTypes.func.isRequired,
     loading: PropTypes.bool.isRequired,
     match: PropTypes.object.isRequired,
-    error: PropTypes.object
+    error: PropTypes.object,
+    kwJobList: PropTypes.array.isRequired
   }
 
   componentDidMount() {
@@ -18,14 +21,24 @@ class KWContainer extends PureComponent {
   }
 
   render() {
+    const { kwJobList, loading } = this.props;
+    if(loading) return <h1>loading</h1>;
     return (
       <section>
         <KWSearchContainer query={this.props.match.params.query } />
+        <KwList jobListings = {kwJobList} />
       </section>
     );
   }
 
 }
+
+const mapStateToProps = state => ({
+  kwJobList: getKWJobsList(state),
+  loading: getKWJobsLoading(state),
+  error: getKWJobsError(state)
+
+});
 
 const mapDispatchToProps = (dispatch, props) => ({
   fetch() {
@@ -34,6 +47,6 @@ const mapDispatchToProps = (dispatch, props) => ({
 });
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(KWContainer);

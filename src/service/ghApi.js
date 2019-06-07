@@ -3,7 +3,6 @@ const get = url => {
     .then(res => ([res.ok, res.json()]))
     .then(([ok, json]) => {
       if(!ok) throw 'unable to fetch';
-      console.log(json, 'json');
       return json;
     });
 };
