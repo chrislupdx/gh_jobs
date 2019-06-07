@@ -16,8 +16,10 @@ export default function reducer(state = initialState, action) {
     case FETCH_JOBBYKW_LOADING:
       return { ...state, loading: true };
     case FETCH_JOBBYKW:
-      return { ...state, error: null, loading: true, kwJobList: action.payload };
+      return { ...state, error: null, loading: false, kwJobList: action.payload };
     case FETCH_JOBBYKW_ERROR:
       return { ...state, loading: false, error: action.payload };
+    default:
+      return state;
   }
 }

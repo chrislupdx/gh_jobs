@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 export default class KWSearchForm extends PureComponent {
     static propTypes = {
       onSubmit: PropTypes.func.isRequired,
-      query: PropTypes.string.isRequired
     }
     //what are we actually doing with query in state here
 
@@ -20,6 +19,7 @@ export default class KWSearchForm extends PureComponent {
 
       const { query } = this.state;
       const { onSubmit } = this.props;
+      console.log(query, 'qunery');
       onSubmit(query);
       this.setState({ query: '' });
     }
