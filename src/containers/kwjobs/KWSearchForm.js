@@ -6,6 +6,10 @@ export default class KWSearchForm extends PureComponent {
       onSubmit: PropTypes.func.isRequired,
       query: PropTypes.string.isRequired
     }
+    //what are we actually doing with query in state here
+
+    //onsubmit takes query from props, so state is likely unneeded
+
 
     state = {
       query: ''
