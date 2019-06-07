@@ -23,6 +23,7 @@ class JobsByIdContainer extends PureComponent {
 
     componentDidMount() {
       this.props.fetch();
+      console.log(this.props);
     }
 
     render() {

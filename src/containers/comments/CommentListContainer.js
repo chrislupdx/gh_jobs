@@ -7,6 +7,7 @@ const mapStateToProps = (state, { id }) => ({
   comment: getComments(state, id)
 });
 
+
 export default connect(
   mapStateToProps,
   null,
