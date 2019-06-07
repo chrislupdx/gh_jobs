@@ -9,7 +9,7 @@ const get = url => {
 
 
 export const getGenPdxJobs = () => {
-  return get('https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?location=Remote');
+  return get('https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?location=Portland+OR');
    
 };
 
