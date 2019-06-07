@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export default class KWSearchForm extends PureComponent {
     static propTypes = {
       onSubmit: PropTypes.func.isRequired,
-      id: PropTypes.string.isRequired
+      query: PropTypes.string.isRequired
     }
 
     state = {
@@ -20,7 +20,7 @@ export default class KWSearchForm extends PureComponent {
       this.setState({ query: '' });
     }
 
-    updateSearch = ({ target }) => {
+    updateKWSearch = ({ target }) => {
       this.setState({ query: target.value });
     } 
 
@@ -28,10 +28,11 @@ export default class KWSearchForm extends PureComponent {
       const { query } = this.state;
       return (
         <form onSubmit={this.handleSubmit}>
-          <textarea value={query} onChange= {this.updateSearch}>
+          <textarea value={query} onChange= {this.updateKWSearch}>
           </textarea>
           <button>search for another listing</button>
         </form>
       );
     }
 }
+

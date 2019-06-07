@@ -7,12 +7,15 @@ import {
 } from 'react-router-dom';
 import PdxGenJobListContainer from '../containers/jobs/PdxGenJobListContainer';
 import JobsByIdContainer from '../containers/jobs/JobsByIdContainer';
+import KWSearchContainer from '../containers/kwjobs/KWSearchContainer';
 
 export default function App() {
   return (
     <Router>
       <Link to="/">Home</Link>
+      <Link to="/search">Search By Keyword</Link>
       <Switch>
+        <Route exact path="/search" component={KWSearchContainer} />
         <Route path="/:id" component={JobsByIdContainer} />
         <Route exact path="/" component={PdxGenJobListContainer} />
       </Switch>
