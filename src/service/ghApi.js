@@ -18,5 +18,6 @@ export const getJobById = id => {
 };
 
 export const getJobByKW = kw => {
-  return get(`https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions/${kw}.json`);
+  return get(`https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?search=${kw}`);
 };
+

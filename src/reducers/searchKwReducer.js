@@ -11,11 +11,12 @@ const initialState = {
 };
 
 export default function reducer(state = initialState, action) {
+  console.log('kwreducer', action.payload);
   switch(action.type) {
     case FETCH_JOBBYKW_LOADING:
       return { ...state, loading: true };
     case FETCH_JOBBYKW:
-      return { ...state, error: null, loading: true };
+      return { ...state, error: null, loading: true, kwJobList: action.payload };
     case FETCH_JOBBYKW_ERROR:
       return { ...state, loading: false, error: action.payload };
   }
