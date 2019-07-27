@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Jobapp from './jobapp';
+import { list } from '../../styles';
+
 
 function List({ jobapps }) {
   const jobappList = jobapps.map(app => (
@@ -10,7 +12,7 @@ function List({ jobapps }) {
   ));
 
   return (
-    <ul>
+    <ul className= "list">
       {jobappList}
     </ul>
   );

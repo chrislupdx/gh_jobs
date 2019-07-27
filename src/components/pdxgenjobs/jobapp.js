@@ -12,7 +12,6 @@ export default function Jobapp({ jobapp }) {
       <p>{jobapp.company}</p>
       <p>{jobapp.company_url}</p>
 
-
     </section>
   );
 }
