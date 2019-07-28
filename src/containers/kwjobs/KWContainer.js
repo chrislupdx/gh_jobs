@@ -5,7 +5,7 @@ import { fetchJobByKW } from '../../actions/kwSearchActions';
 import KWSearchContainer from '../kwjobs/KWSearchContainer';
 import KwList from '../../components/kwjobs/kwList';
 import { getKWJobsList, getKWJobsLoading, getKWJobsError } from '../../selectors/kwSelector';
-
+import { Loadingtext } from '../../styles';
 class KWContainer extends PureComponent {
   //rn just props for upload
   static propTypes = {
@@ -22,7 +22,7 @@ class KWContainer extends PureComponent {
 
   render() {
     const { kwJobList, loading } = this.props;
-    if(loading) return <h1>loading</h1>;
+    if(loading) return <Loadingtext>Loading...</Loadingtext>;
     return (
       <section>
         <KWSearchContainer query={this.props.match.params.query } />

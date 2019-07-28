@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import { Searchform, FormButton, Searchtextarea } from '../../styles';
 
 export default class KWSearchForm extends PureComponent {
     static propTypes = {
@@ -25,16 +26,16 @@ export default class KWSearchForm extends PureComponent {
 
     updateKWSearch = ({ target }) => {
       this.setState({ query: target.value });
-    } 
+    }
 
     render() {
       const { query } = this.state;
       return (
-        <form onSubmit={this.handleSubmit}>
-          <textarea value={query} onChange= {this.updateKWSearch}>
-          </textarea>
-          <button>search for another listing</button>
-        </form>
+        <Searchform onSubmit={this.handleSubmit}>
+          <Searchtextarea value={query} onChange= {this.updateKWSearch}>
+          </Searchtextarea>
+          <FormButton>search for another listing</FormButton>
+        </Searchform>
       );
     }
 }
