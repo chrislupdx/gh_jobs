@@ -4,9 +4,9 @@ import Kwjobapp from './kwjobapp';
 
 function kwList({ jobListings }) {
   const kwjobList = jobListings.map(kwapp => (
-    <li key={kwapp.id}>
+    <p key={kwapp.id}>
       <Kwjobapp kwJobapp={kwapp} />
-    </li>
+    </p>
   ));
 
   return (
