@@ -3,7 +3,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from 'react-router-dom';
 import JobsByIdContainer from '../containers/jobs/JobsByIdContainer';
 import KWContainer from '../containers/kwjobs/KWContainer';

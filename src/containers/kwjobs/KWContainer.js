@@ -5,7 +5,7 @@ import { fetchJobByKW } from '../../actions/kwSearchActions';
 import KWSearchContainer from '../kwjobs/KWSearchContainer';
 import KwList from '../../components/kwjobs/kwList';
 import { getKWJobsList, getKWJobsLoading, getKWJobsError } from '../../selectors/kwSelector';
-import { Loadingtext, FormButton } from '../../styles';
+import { Loadingtext } from '../../styles';
 class KWContainer extends PureComponent {
   //rn just props for upload
   static propTypes = {
