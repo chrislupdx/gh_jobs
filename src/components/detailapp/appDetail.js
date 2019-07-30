@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { DetailSection, FormButton } from '../../styles';
 
 function AppDetailView({ jobapp }) {
   const {
@@ -14,13 +15,16 @@ function AppDetailView({ jobapp }) {
 
   return (
     <section>
-      <p>{title}</p>
-      <p>{company}</p>
-      <p dangerouslySetInnerHTML={ { __html: how_to_apply }}></p>
-      <p>{created_at}</p>
-      <p>{location}</p>
-      <p>{type}</p>
-      <p dangerouslySetInnerHTML={ { __html: description }}></p>
+      <FormButton a href="/">Home</FormButton>
+      <DetailSection>
+        <p>{title}</p>
+        <p>{company}</p>
+        <p dangerouslySetInnerHTML={ { __html: how_to_apply }}></p>
+        <p>{created_at}</p>
+        <p>{location}</p>
+        <p>{type}</p>
+        <p dangerouslySetInnerHTML={ { __html: description }}></p>
+      </DetailSection>
     </section>
   );
 }
