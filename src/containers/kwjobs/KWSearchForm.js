@@ -8,17 +8,18 @@ export default class KWSearchForm extends PureComponent {
     }
 
     state = {
-      query: 'pick a keyword',
-      location: 'pick a location'
+      query: '',
+      location: ''
     }
 
     handleSubmit = event => {
+      // console.log(this.state, 'handlesubmit');
       event.preventDefault();
 
       const { query, location } = this.state;
       const { onSubmit } = this.props;
       onSubmit(query, location);
-      this.setState({ query: '', location: '' });
+      this.setState({ query: 'pick a keyword', location: 'pick a location' });
     }
 
     updateKWSearch = ({ target }) => {
