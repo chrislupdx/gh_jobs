@@ -10,14 +10,15 @@ const get = url => {
 
 export const getGenPdxJobs = () => {
   return get('https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?location=Remote');
-   
 };
 
 export const getJobById = id => {
   return get(`https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions/${id}.json`);
 };
 
-export const getJobByKW = kw => {
-  return get(`https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?search=${kw}`);
+export const getJobByKW = (query, location) => {
+  console.log(query, location);
+  return get(`https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?description=${query}&location=${location}`);
 };
+
 
