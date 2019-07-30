@@ -6,37 +6,39 @@ export default class KWSearchForm extends PureComponent {
     static propTypes = {
       onSubmit: PropTypes.func.isRequired,
     }
-    //what are we actually doing with query in state here
-
-    //onsubmit takes query from props, so state is likely unneeded
-
 
     state = {
-      query: ''
+      query: 'pick a keyword',
+      location: 'pick a location'
     }
 
     handleSubmit = event => {
       event.preventDefault();
 
-      const { query } = this.state;
+      const { query, location } = this.state;
       const { onSubmit } = this.props;
-      onSubmit(query);
-      this.setState({ query: '' });
+      onSubmit(query, location);
+      this.setState({ query: '', location: '' });
     }
 
     updateKWSearch = ({ target }) => {
       this.setState({ query: target.value });
     }
 
+    updateLocationSearch = ({ target }) => {
+      this.setState({ location: target.value });
+    }
+
     render() {
-      const { query } = this.state;
+      const { query, location } = this.state;
       return (
         <Searchform onSubmit={this.handleSubmit}>
           <Searchtextarea value={query} onChange= {this.updateKWSearch}>
           </Searchtextarea>
-          <FormButton>search for another listing</FormButton>
+          <Searchtextarea value={location} onChange={this.updateLocationSearch}>
+          </Searchtextarea>
+          <FormButton>search</FormButton>
         </Searchform>
       );
     }
 }
-
