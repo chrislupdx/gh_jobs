@@ -7,11 +7,12 @@ import {
 } from 'react-router-dom';
 import JobsByIdContainer from '../containers/jobs/JobsByIdContainer';
 import KWContainer from '../containers/kwjobs/KWContainer';
+import { StyledLink } from '../styles';
 
 export default function App() {
   return (
     <Router>
-      <Link to="/">Home</Link>
+      <StyledLink to="/">Home</StyledLink>
       <Switch>
         <Route path="/:id" component={JobsByIdContainer} />
         <Route exact path="/" component={KWContainer} />

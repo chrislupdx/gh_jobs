@@ -15,7 +15,6 @@ function AppDetailView({ jobapp }) {
 
   return (
     <section>
-      <FormButton a href="/">Home</FormButton>
       <DetailSection>
         <p>{title}</p>
         <p>{company}</p>

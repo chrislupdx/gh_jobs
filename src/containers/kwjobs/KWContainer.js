@@ -25,7 +25,6 @@ class KWContainer extends PureComponent {
     if(loading) return <Loadingtext>Loading...</Loadingtext>;
     return (
       <section>
-        <FormButton a href="/">Home</FormButton>
         <KWSearchContainer query={this.props.match.params.query } />
         <KwList jobListings = {kwJobList} />
       </section>

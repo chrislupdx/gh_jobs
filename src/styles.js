@@ -1,11 +1,10 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const List = styled.div`
 display: flex;
 color: blue;
 `;
-
-
 
 export const Jobapp = styled.div`
 display: flex;
@@ -41,4 +40,10 @@ export const DetailSection = styled.div`
 // display: flex;
 // justify-content: center;
 // align-content: space-around;
+`;
+
+export const StyledLink = styled(Link)`
+background-color: #757de8;
+font-weight: bold;
+border: none;
 `;
