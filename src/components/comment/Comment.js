@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { CommentText } from '../../styles';
 function Comment({ comment }) {
   return (
     <section>
-      <p>{comment}</p>
+      <CommentText>{comment}</CommentText>
     </section>
   );
 }
