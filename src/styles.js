@@ -21,7 +21,7 @@ font-weight: bold;
 border: none;
 `;
 
-export const Searchtextarea = styled.textarea`
+export const Searchtextarea = styled.input`
 font-weight-bold;
 font: 20px arial;
 resize: none;
