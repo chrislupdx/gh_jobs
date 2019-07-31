@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-
+import { FormButton, CommentInput, CommentFormDiv } from '../../styles';
 export default class CommentForm extends PureComponent {
     static propTypes = {
       onSubmit: PropTypes.func.isRequired,
@@ -28,10 +28,10 @@ export default class CommentForm extends PureComponent {
     render() {
       const { comment } = this.state;
       return (
-        <form onSubmit={this.handleSubmit}>
-          <textarea value={comment} onChange= {this.updateComment}></textarea>
-          <button>Submit</button>
-        </form>
+        <CommentFormDiv onSubmit={this.handleSubmit}>
+          <CommentInput value={comment} onChange= {this.updateComment}></CommentInput>
+          <FormButton>Submit</FormButton>
+        </CommentFormDiv>  
       );
     }
 }
