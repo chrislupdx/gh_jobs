@@ -30,7 +30,7 @@ export default class CommentForm extends PureComponent {
       return (
         <CommentFormDiv onSubmit={this.handleSubmit}>
           <CommentInput value={comment} onChange= {this.updateComment}></CommentInput>
-          <FormButton>Submit</FormButton>
+          <FormButton>Submit Comment</FormButton>
         </CommentFormDiv>  
       );
     }

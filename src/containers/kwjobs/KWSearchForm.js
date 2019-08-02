@@ -8,8 +8,8 @@ export default class KWSearchForm extends PureComponent {
     }
 
     state = {
-      query: '',
-      location: ''
+      query: 'add a keyword',
+      location: 'add a location'
     }
 
     handleSubmit = event => {
