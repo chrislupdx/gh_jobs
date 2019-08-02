@@ -1,16 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { DetailText } from '../../styles';
 
 export default function kwJobapp({ kwJobapp }) {
   return (
     <section>
       <Link to ={`/${kwJobapp.id}`}>
-        <p>{kwJobapp.title}</p>
+        <DetailText>{kwJobapp.title}</DetailText>
       </Link>
-      <p>{kwJobapp.created_at}</p>
-      <p>{kwJobapp.company}</p>
-      <p>{kwJobapp.company_url}</p>
+      <DetailText>{kwJobapp.created_at}</DetailText>
+      <DetailText>{kwJobapp.company}</DetailText>
+      <DetailText>{kwJobapp.company_url}</DetailText>
     </section>
   );
 }
