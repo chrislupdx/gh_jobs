@@ -25,7 +25,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "promise-middleware-redux": "^1.1.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
